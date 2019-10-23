@@ -1,0 +1,5 @@
+$scopes = Get-DhcpServerv4Scope
+
+foreach($id in $scopes.ScopeID){
+    Set-DhcpServerv4OptionValue -ScopeId $id -OptionId 042 -value 10.194.250.15, 10.194.249.15
+    }
